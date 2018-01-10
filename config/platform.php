@@ -127,6 +127,7 @@ return [
 
     'single' => [
         App\Core\Behaviors\Single\About::class,
+        App\Core\Behaviors\Single\Contact::class,
     ],
 
     /*

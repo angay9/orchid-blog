@@ -1324,7 +1324,7 @@ function isValidEmailAddress(emailAddress) {
 }
 
 
-var SendMail = function () {
+var SendMail = function (e) {
 
     var emailVal = jQuery('#contact-email').val();
 
@@ -1334,39 +1334,55 @@ var SendMail = function () {
             'name': jQuery('#name').val(),
             'email': jQuery('#contact-email').val(),
             'subject': jQuery('#subject').val(),
-            'message': jQuery('#message').val()
+            'message': jQuery('#message').val(),
+            '_token': jQuery('#token').val(),
         };
+
         jQuery.ajax({
             type: "POST",
-            url: "php/sendMail.php",
+            url: "/contact/email",
             data: params,
             success: function (response) {
                 if (response) {
-                    var responseObj = jQuery.parseJSON(response);
-                    if (responseObj.ResponseData)
-                    {
-                        alert(responseObj.ResponseData);
+                    
+                    if (response.success === true) {
+                       
+                        jQuery('#name').val('');
+                        jQuery('#contact-email').val('');
+                        jQuery('#subject').val('');
+                        jQuery('#message').val('');
+
+                        alert('Thank you for submitting your request.');
                     }
                 }
             },
             error: function (xhr, ajaxOptions, thrownError) {
+
                 //xhr.status : 404, 303, 501...
                 var error = null;
                 switch (xhr.status)
                 {
-                    case "301":
+                    case 301:
                         error = "Redirection Error!";
                         break;
-                    case "307":
+                    case 307:
                         error = "Error, temporary server redirection!";
                         break;
-                    case "400":
+                    case 400:
                         error = "Bad request!";
                         break;
-                    case "404":
+                    case 404:
                         error = "Page not found!";
                         break;
-                    case "500":
+                    case 422:
+                        var errors =  xhr.responseJSON.errors;
+                        error = '';
+                        Object.keys(errors).forEach(function (fieldName) {
+                            error += fieldName + ': ' + errors[fieldName].join(' ') + '\n';
+                        });
+
+                        break;
+                    case 500:
                         error = "Server is currently unavailable!";
                         break;
                     default:

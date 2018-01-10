@@ -68,12 +68,12 @@
                 </div>
                 <div class="social-holder">
                     <div class="social-list">
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-youtube-play"></i></a>
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-vimeo"></i></a>
-                        <a href="#"><i class="fa fa-behance"></i></a>
-                        <a href="#"><i class="fa fa-rss"></i></a>
+                        <a href="{{ config('social.twitter') }}"><i class="fa fa-twitter"></i></a>
+                        <a href="{{ config('social.youtube') }}"><i class="fa fa-youtube-play"></i></a>
+                        <a href="{{ config('social.facebook') }}"><i class="fa fa-facebook"></i></a>
+                        <a href="{{ config('social.vimeo') }}"><i class="fa fa-vimeo"></i></a>
+                        <a href="{{ config('social.behance') }}"><i class="fa fa-behance"></i></a>
+                        <a href="{{ config('social.rss') }}"><i class="fa fa-rss"></i></a>
                     </div>
                 </div>
                 <div class="fixed scroll-top"><i class="fa fa-caret-square-o-up" aria-hidden="true"></i></div>
