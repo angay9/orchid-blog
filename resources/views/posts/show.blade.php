@@ -8,7 +8,7 @@
             </h1>
             @if($post->getContent('picture'))
                 <div>
-                    <img src="{{ $post->getContent('picture') }}">
+                    <img src="{{ $post->getContent('picture') }}" class="center-block">
                 </div>
             @endif
             <div class="post-info content-660 center-relative">

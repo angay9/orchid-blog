@@ -53,7 +53,7 @@ class Post extends Many
             'name'        => 'tag:input|type:text|name:name|max:255|required|title:Article name|help:Article title',
             'excerpt'     => 'tag:textarea|name:excerpt|max:255|required|title:Excerpt',
             'body'        => 'tag:wysiwyg|name:body|required|title:Article body',
-            'picture'     => 'tag:picture|name:picture|max:255|title:Blog picture|help:Allow search bots to index page|width:1200|height:600',
+            'picture'     => 'tag:picture|name:picture|max:255|title:Blog picture|help:Allow search bots to index page|width:1000|height:600',
             'title'       => 'tag:input|type:text|name:title|max:255|required|title:Article Title|help:SEO title',
             'description' => 'tag:textarea|name:description|max:255|required|rows:5|title:Short description',
             'keywords'    => 'tag:tags|name:keywords|max:255|required|title:Keywords|help:SEO keywords',

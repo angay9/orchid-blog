@@ -39,7 +39,7 @@
                 <div class="site-info-holder">
                     <h1 class="site-title">Suppablog</h1>
                     <p class="site-description">
-                        Suppablog is simple and yet cool wordpress theme to lorem ipsum dolor sit.
+                        All credits to <a href="https://colorlib.com/wp/template/suppablog/">suppablog theme</a>.
                     </p>
                 </div>
                 <nav id="header-main-menu">

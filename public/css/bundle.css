@@ -929,6 +929,12 @@ a.has-submenu
 {
     display: inline-block;
 }
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 html
 {
     overflow: hidden;
