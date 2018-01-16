@@ -55,7 +55,6 @@ class About extends Single
     {
         return [
             'picture'   =>   'tag:picture|name:picture|title:picture|width:1300|height:400',
-            'slug'        => 'tag:input|type:text|name:slug|max:255|required|title:Page slug',
             'text_col_1'     => 'tag:wysiwyg|name:text_col_1|required|title:Text column 1',
             'text_col_2'     => 'tag:wysiwyg|name:text_col_2|required|title:Text column 2',
             'author_picture'    =>  'tag:picture|name:author_picture|title:Author picture|width:700|height:700',
