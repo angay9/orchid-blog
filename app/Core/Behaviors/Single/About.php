@@ -38,7 +38,6 @@ class About extends Single
     {
         return [
             'content.*.picture' =>  'required',
-            'content.*.slug'    =>  'required',
             'content.*.text_col_1'    =>  'required',
             'content.*.text_col_2'    =>  'required',
             'content.*.author_picture'    =>  'required',
