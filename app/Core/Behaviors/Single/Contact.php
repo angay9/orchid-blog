@@ -37,7 +37,6 @@ class Contact extends Single
     public function rules(): array
     {
         return [
-            'content.*.slug'    =>  'required',
             'content.*.lat'    =>  'required',
             'content.*.lng'    =>  'required',
             'content.*.marker_lat'    =>  'required',
@@ -52,7 +51,6 @@ class Contact extends Single
     public function fields() : array
     {
         return [
-            'slug'        => 'tag:input|type:text|name:slug|max:255|required|title:Page slug',
             'lat'        => 'tag:input|type:text|name:lat|max:255|required|title:Latitude',
             'lng'        => 'tag:input|type:text|name:lng|max:255|required|title:Longitude',
             'marker_lat'        => 'tag:input|type:text|name:marker_lat|max:255|required|title:Marker Latitude',
